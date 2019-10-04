@@ -1,0 +1,44 @@
+import java.util.Scanner;
+import java.lang.Math; 
+
+class Lesson_24_Activity_Two {
+  public static void main(String[] args){
+    Scanner scan = new Scanner (System.in);
+    String thing = "{";
+    System.out.println("How long do you want the array?");
+    int arrLength = scan.nextInt();
+    double arr[];
+    arr = new double[arrLength];
+    double avg = 0.0;
+    double range;
+    if(arrLength > 0)
+    {
+      for(int i = 0; i < arrLength; i++){
+        System.out.println("Enter a number:");
+        arr[i] = scan.nextDouble();
+      }
+      for(int k = 0; k < arrLength; k++){
+        thing = thing + arr[k];
+          if(k<arrLength-1){
+             thing = thing + ", "; 
+          }
+      }
+      thing = thing + "}";
+      System.out.println("Your array is " + thing);
+      for(int j = 0; j < arrLength; j++){
+        avg = avg + arr[j];
+        if(j == arrLength - 1){
+          avg = avg / j;
+        }
+      }
+      System.out.println("The average is " + avg);
+      range = arr[arrLength-1] - arr[0];
+      System.out.println("The range is " + range);
+      for(
+    }
+    else
+    {
+      System.out.println("Not a valid length!");
+    }
+}
+}

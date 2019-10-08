@@ -25,20 +25,21 @@ class Lesson_30_Activity {
   
     public static void main(String[] args)
     {
-        String temp = "";
-        for(int i = 0; i<list.length; i++)
+        for (int i = 0; i < list.length; i++)
         {
-            temp = "";
-            for(int n = 0; n<list[i].length; n++)
+            String temp = list[i];
+            int n = 0;
+            while (n < temp.length())
             {
-                if(list[i].substring(n, n+1) != " ")
-                    temp = temp + list[i].substring(n, n+1);
+                if (temp.charAt(n) == ' '){
+                    temp = temp.substring(0, n) + temp.substring(n + 1);
+                    n = 0;
+                }
+                else{
+                    n++;
+                }
             }
             list[i] = temp;
         }
-        System.out.println(list[0]);
-        System.out.println(list[1]);
-        System.out.println(list[2]);
-        System.out.println(list[3]);
     }
 }

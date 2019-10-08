@@ -19,22 +19,20 @@ import java.util.Scanner;
 import java.lang.Math; 
 
 class Lesson_29_Activity_One {
-  
-  /* Fill this list with values that will be useful for you to test. 
-   * A good idea may be to copy/paste the list in the example above. 
-   * Do not make any changes to this list in your main method. You can 
-   * print values from list, but do not add or remove values to this 
-   * variable. 
-   */
-  public static String [] list = {};
+
+  public static String [] list = {"high", "every", "nearing", "checking", "food ", 
+     "stand", "value",  "best", "energy", "add", "grand", "notation",
+     "abducted", "food ", "stand"};
   
     public static void main(String[] args)
-     {
-/*
- * Write your code here
- * Copy and paste your entire program to Code Runner
- * to complete the activity, from the first import statement
- * to the last bracket.
- */
-}
+    {
+      int s = 0;
+      for(int i = 1; i < list.length; i++)
+      {
+        if(list[s].length() < list[i].length()){
+          s = i;
+        }
+      }
+      System.out.println(list[s]);
+    }
 }

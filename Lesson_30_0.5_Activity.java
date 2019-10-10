@@ -32,26 +32,25 @@ class Lesson_1011_Activity{
      {
       Scanner scan = new Scanner (System.in);
       System.out.println("Enter a number in base 8:");
-      int eight = scan.nextInt();
+      String eight = scan.nextLine();
       boolean check = true;
       int count = 0;
-      int n = eight;
-      if(eight > 77777777)
-        check = false;
-      while (n != 0)
-      {
-        n /= 10;
-        count++;
-      }
-      if(count != 0){
-        int [] numberArray = new int[count];
-        count = 0;
-        n = eight;
-        while (eight != 0){
-          numberArray[count] = eight % 10;
+      int n = Integer.parseInt(eight);
+      //String arr [];
+      if(n < 77777777){
+        while (n != 0)
+        {
           n /= 10;
           count++;
         }
+        String[] arr = new String[count];
+        for(int i = 0; i < count; i++){
+          arr[i] = eight.substring(0, 1);
+        }
       }
-}
+      else{
+        System.out.println("ERROR: Incorrect Octal Format");
+      }
+     }
+      
 }

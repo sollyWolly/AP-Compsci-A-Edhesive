@@ -39,24 +39,32 @@ class Lesson_1011_Activity{
       int newNum;
       int total = 0;
       //String arr [];
-      if(n < 77777777){
+      if(n < 77777777 || n >= 0){
         while (n != 0)
         {
           n /= 10;
           count++;
         }
         String[] arrOld = new String[count];
-        for(int i = 0; i < count; i++){
+        for(int i = 0; i < count; i++)
+        {
           arrOld[i] = eight.substring(0, 1);
+          if(Integer.parseInt(arrOld[i]) > 7)
+          {
+            System.out.println("ERROR: Incorrect Octal Format");
+            break
+          }
         }
         String[] arrNew = new String[count];
-        for(int n = count; n > 0; n--){
+        for(int n = count; n > 0; n--)
+        {
           oldNum = arrOld[n];
           newNum = oldNum * 8 ^ n;
           arrNew[n] = newNum;
         }
-        for(count){
-            total = 
+        for(int z = count; z > -1; z--)
+        {
+            total = total + arrNew[z];
         }
       }
       else{

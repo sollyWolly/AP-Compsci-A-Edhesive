@@ -38,8 +38,7 @@ class Lesson_1011_Activity{
       int oldNum;
       int newNum;
       int total = 0;
-      //String arr [];
-      if(n < 77777777 || n >= 0){
+      if(n < 77777777 && n >= 0){
         while (n != 0)
         {
           n /= 10;
@@ -48,28 +47,32 @@ class Lesson_1011_Activity{
         String[] arrOld = new String[count];
         for(int i = 0; i < count; i++)
         {
-          arrOld[i] = eight.substring(0, 1);
+          arrOld[i] = eight.substring(i, i+1);
           if(Integer.parseInt(arrOld[i]) > 7)
           {
             System.out.println("ERROR: Incorrect Octal Format");
-            break
+            return;
           }
         }
-        String[] arrNew = new String[count];
-        for(int n = count; n > 0; n--)
+        int [] arrNew = new int [count];
+        int p = count - 1;
+        for(int s = 0; s < count; s++)
         {
-          oldNum = arrOld[n];
-          newNum = oldNum * 8 ^ n;
-          arrNew[n] = newNum;
+          System.out.println("[d]: arrNew[s]: "+Integer.parseInt(arrOld[s]));
+          System.out.println("[d]: p: "+p);
+          arrNew[s] = Integer.parseInt(arrOld[s]);
+          arrNew[s] = arrNew[s] * (int)(Math.pow(8, p));
+          System.out.println(arrNew[s]);
+          total += arrNew[s];
+          p = p - 1;
         }
-        for(int z = count; z > -1; z--)
-        {
-            total = total + arrNew[z];
-        }
+        System.out.println(arrNew[0]);
+        System.out.println(arrNew[1]);
+        System.out.println(arrNew[2]);
+        System.out.println(total);
       }
       else{
         System.out.println("ERROR: Incorrect Octal Format");
       }
      }
-      
 }

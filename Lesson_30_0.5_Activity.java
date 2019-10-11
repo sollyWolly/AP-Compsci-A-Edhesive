@@ -38,16 +38,21 @@ class Lesson_1011_Activity{
       int oldNum;
       int newNum;
       int total = 0;
-      if(n < 77777777 && n >= 0){
+      //tests if the number is more than 8 digits and also positive
+      if(n < 77777777 && n >= 0)
+      {
+        //this while loop counts the number of digits
         while (n != 0)
         {
           n /= 10;
           count++;
         }
         String[] arrOld = new String[count];
+        //this for loop is to put each digit into array
         for(int i = 0; i < count; i++)
         {
           arrOld[i] = eight.substring(i, i+1);
+          //tests if any of the numbers are bigger than 7
           if(Integer.parseInt(arrOld[i]) > 7)
           {
             System.out.println("ERROR: Incorrect Octal Format");
@@ -56,19 +61,15 @@ class Lesson_1011_Activity{
         }
         int [] arrNew = new int [count];
         int p = count - 1;
+        //this for loop is used to calculate the base 8 digits into base 10 digits and add them to the total base 10 number.
         for(int s = 0; s < count; s++)
         {
-          System.out.println("[d]: arrNew[s]: "+Integer.parseInt(arrOld[s]));
-          System.out.println("[d]: p: "+p);
           arrNew[s] = Integer.parseInt(arrOld[s]);
           arrNew[s] = arrNew[s] * (int)(Math.pow(8, p));
           System.out.println(arrNew[s]);
           total += arrNew[s];
           p = p - 1;
         }
-        System.out.println(arrNew[0]);
-        System.out.println(arrNew[1]);
-        System.out.println(arrNew[2]);
         System.out.println(total);
       }
       else{

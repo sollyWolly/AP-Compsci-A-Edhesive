@@ -43,10 +43,13 @@ class Lesson_1011_Activity{
           n /= 10;
           count++;
         }
-        String[] arr = new String[count];
+        String[] arrOld = new String[count];
         for(int i = 0; i < count; i++){
-          arr[i] = eight.substring(0, 1);
+          arrOld[i] = eight.substring(0, 1);
         }
+        String[] arrNew = new String[count];
+        for(int n = 0; n < count; n++){
+          
       }
       else{
         System.out.println("ERROR: Incorrect Octal Format");

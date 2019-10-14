@@ -38,18 +38,35 @@ import java.util.Scanner;
 import java.lang.Math; 
 
 class Main {
-  public static void main(String[] args){
+  public static void main(String[] args)
+  {
     Scanner scan = new Scanner (System.in);
-    System.out.println("Enter a
+    System.out.println("Enter an array length (must be 10 or greater)");
+    int length1 = scan.nextInt();
+    System.out.println("Enter an array length (must be 10 or greater)");
+    int length2 = scan.nextInt();
+    int arr1 [] = new int [length1];
+    int arr2 [] = new int [length2];
+    System.out.print("First Array:");
+    for(int a = 0; a < length1; a++)
+    {
+      arr1[a] = (int)(Math.random() * 100 + 1);
+      System.out.print(" ");
+      System.out.print(arr1[a]);
+    }
+    System.out.println("");
+    System.out.print("Second Array:");
+    for(int b = 0; b < length2; b++)
+    {
+      arr1[b] = (int)(Math.random() * 100 + 1);
+      System.out.print(" ");
+      System.out.print(arr1[b]);
+    }
+    int c = 0;
+    System.out.println("");
+    System.out.println("Merged Array:");
+    while(c < length1 && c < length2)
+    {
+    }
+  }
 }
-}
-
-
-
-
-
-
-
-
-
-

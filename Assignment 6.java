@@ -17,8 +17,7 @@
  *The numbers should be added to the merged array in an alternating pattern:
  *    - first from list 1, then from list 2, then list 1 again, etc.
  *If a number in one of the arrays already appears in the merged array
- *then it should be ignored
- *and the program should alternate to the other list again.
+ *then it should be ignore and the program should alternate to the other list again.
  *
  *For example, if the first list begins 1 2 3 10, and the second begins 3 4 5 8, then the merged list would begin 1 3 2 4 5 10 8.
  *
@@ -67,6 +66,16 @@ class Main {
     System.out.println("Merged Array:");
     while(c < length1 && c < length2)
     {
+      if(c <= arr1.length - 1){
+        System.out.println(arr1[c]);
+      }
+      if(c <= arr2.length - 1){
+        System.out.println(arr2[c]);
+      }
+      else
+      {
+        return;
+      }
     }
   }
 }

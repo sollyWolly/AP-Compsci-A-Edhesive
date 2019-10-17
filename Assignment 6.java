@@ -48,22 +48,46 @@ class Main {
     }
     int arr1 [] = new int [length1];
     int arr2 [] = new int [length1];
-    System.out.print("First Array:");
     for(int a = 0; a < length1; a++)
     {
+      if(a == 0)
+      {
+        System.out.print("First Array:");
+      }
       arr1[a] = (int)(Math.random() * 100 + 1);
-      System.out.print(" ");
-      System.out.print(arr1[a]);
+      System.out.print(" " + arr1[a]);
     }
-    System.out.println("");
-    System.out.print("Second Array:");
     for(int b = 0; b < length1; b++)
     {
+      if(b == 0)
+      {
+        System.out.println("");
+        System.out.print("Second Array:");
+      }
       arr2[b] = (int)(Math.random() * 100 + 1);
-      System.out.print(" ");
-      System.out.print(arr2[b]);
+      System.out.print(" " + arr2[b]);
     }
     int c  = length1 * 2; //2 arrays of the same length
+    int count = 0;
+    int z = 0;
     int mergeArr [] = new int [c];
+    while(z < c)
+    {
+      mergeArr[z] = arr1[count];
+      mergeArr[z+1] = arr2[count];
+      count++;
+      z+=2;
+    }
+    for(int shoot = 0; shoot < c; shoot++)
+    {
+      if(shoot == 0)
+      {
+        System.out.println("");
+        System.out.print("Merged Array:");
+      }
+      System.out.print(" " + mergeArr[shoot]);
+    }
+    for(int flip = 0; flip < c; flip++)
+    {
   }
 }

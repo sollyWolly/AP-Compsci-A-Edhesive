@@ -40,12 +40,14 @@ class Main {
   public static void main(String[] args)
   {
     Scanner scan = new Scanner (System.in);
-    System.out.println("Enter an array length (must be 10 or greater)");
-    int length1 = scan.nextInt();
-    System.out.println("Enter an array length (must be 10 or greater)");
-    int length2 = scan.nextInt();
+    int length1 = -1;
+    while(length1 < 10)
+    {
+      System.out.println("Enter an array length (must be 10 or greater)");
+      length1 = scan.nextInt();
+    }
     int arr1 [] = new int [length1];
-    int arr2 [] = new int [length2];
+    int arr2 [] = new int [length1];
     System.out.print("First Array:");
     for(int a = 0; a < length1; a++)
     {
@@ -55,27 +57,13 @@ class Main {
     }
     System.out.println("");
     System.out.print("Second Array:");
-    for(int b = 0; b < length2; b++)
+    for(int b = 0; b < length1; b++)
     {
-      arr1[b] = (int)(Math.random() * 100 + 1);
+      arr2[b] = (int)(Math.random() * 100 + 1);
       System.out.print(" ");
-      System.out.print(arr1[b]);
+      System.out.print(arr2[b]);
     }
-    int c = 0;
-    System.out.println("");
-    System.out.println("Merged Array:");
-    while(c < length1 && c < length2)
-    {
-      if(c <= arr1.length - 1){
-        System.out.println(arr1[c]);
-      }
-      if(c <= arr2.length - 1){
-        System.out.println(arr2[c]);
-      }
-      else
-      {
-        return;
-      }
-    }
+    int c  = length1 * 2; //2 arrays of the same length
+    int mergeArr [] = new int [c];
   }
 }

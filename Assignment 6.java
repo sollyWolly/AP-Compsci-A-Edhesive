@@ -54,21 +54,19 @@ class Main {
     }
     int arr1 [] = new int [length1];
     int arr2 [] = new int [length1];
-    //creation of array 1
+    //assignment of array 1
     for(int a = 0; a < length1; a++)
     {
-      if(a == 0)
-      {
+      if(a == 0){
         System.out.print("First Array:");
       }
       arr1[a] = (int)(Math.random() * 100 + 1);
       System.out.print(" " + arr1[a]);
     }
-    //creation of array 2
+    //assignment of array 2
     for(int b = 0; b < length1; b++)
     {
-      if(b == 0)
-      {
+      if(b == 0){
         System.out.println("");
         System.out.print("Second Array:");
       }
@@ -102,7 +100,7 @@ class Main {
               mergeArr[cup] = 0;
             }
             else{
-            mergeArr[cup] = mergeArr[cup+1];
+              mergeArr[cup] = mergeArr[cup+1];
             }
           }
         }

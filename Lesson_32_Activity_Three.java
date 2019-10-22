@@ -19,16 +19,18 @@ import java.util.Scanner;
 
 class Lesson_32_Activity_Three {
       
-         /*fill in the rest of the method declaration here swap()
+        public static void swap(int x, int y)
           {
-          //Write your code here
+          int temp;
+          temp = x;
+          x = y;
+          y = temp;
+          System.out.println(x + " " + y);
           }
-          */
+          
         
         public static void main(String[] args)
          {
-         /*
-          * Test your method here
-          */
+         swap(7,3);
          }
 }

@@ -23,15 +23,19 @@ import java.util.Scanner;
 
 class Lesson_32_Activity_Four {
       
-        /*fill in the rest of the method declaration realTime( )
+        public static void realTime(int original)
         {
-        //Write your code here
+        double flip = (double) original;
+        int hours = (int)(flip/3600);
+        int minutes = (int)((flip/3600 - hours) * 60);
+        int seconds = (int)(((((flip/3600) - hours) * 60) - minutes) * 60);
+        System.out.println("Hours: " + hours);
+        System.out.println("Minutes: " + minutes);
+        System.out.println("Seconds: " + seconds);
         }
-        */
+        
         public static void main(String[] args)
         {
-        /*
-         * Test your method here
-         */
+        realTime(6342);
         }
 }

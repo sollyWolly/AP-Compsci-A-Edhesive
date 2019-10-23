@@ -23,16 +23,13 @@ import java.util.Scanner;
 
 class Lesson_33_Activity_One {
   
-    /*fill in the rest of the method upper()
+    upper()
     {
      //Write your code here 
     }
-    */
   
     public static void main(String[] args)
      {
-     /*
-      * Test your method here
-      */
+     upper();
     }
 }

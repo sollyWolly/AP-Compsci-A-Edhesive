@@ -23,13 +23,17 @@ import java.util.Scanner;
 
 class Lesson_33_Activity_One {
   
-    upper()
+    public static void upper(String arr [])
     {
-     //Write your code here 
+       for(int i = 0; i < arr.length; i++)
+       {
+         arr[i] = arr[i].toUpperCase();
+       }
     }
   
     public static void main(String[] args)
      {
-     upper();
+      String [] arrTest = {"solomon","pryce","edward","aahron"};
+      upper(arrTest);
     }
 }

@@ -25,16 +25,21 @@ import java.util.Scanner;
 
 class Lesson_33_Activity_Five {
   
-    /*fill in the rest of method insertValue()
+    public static void insertValue(int arr [], int a, int b)
     {
-    //Write your code here
+      int temp = arr[b];
+      int temp2;
+      arr[b] = a;
+      for(int i = b + 1; i < arr.length; i++)
+      {
+        temp2 = arr[i];
+        arr[i] = temp;
+      }
     }
-    */
   
     public static void main(String[] args)
-     {
-     /*
-      * Test your method here
-      */
+    {
+     int Array [] = new int [] {1,2,3,4,5};
+     insertValue(Array, 100, 2);
     }
 }

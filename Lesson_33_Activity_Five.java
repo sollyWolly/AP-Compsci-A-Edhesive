@@ -28,13 +28,11 @@ class Lesson_33_Activity_Five {
     public static void insertValue(int arr [], int a, int b)
     {
       int temp = arr[b];
-      int temp2;
-      arr[b] = a;
-      for(int i = b + 1; i < arr.length; i++)
+      for(int i = arr.length - 1; i > b; i--)
       {
-        temp2 = arr[i];
-        arr[i] = temp;
+        arr[i] = arr[i - 1];
       }
+      arr[b] = a;
     }
   
     public static void main(String[] args)

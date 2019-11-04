@@ -20,15 +20,20 @@ class Lesson_34_Activity_Four {
   
    public static int findMin(int [] a)
     {
-    //Write your code here
-    //Change the return value as you see fit
-     return 0; 
+     int min = a[0];
+     for(int i = 1; i < a.length; i++)
+     {
+       if(min > a[i])
+       {
+         min = a[i];
+       }
+     }
+      return min; 
     }
   
     public static void main(String[] args)
-     {
-     /*
-      * Test your method here
-      */
+    {
+      int [] b = new int [] {1, 2, 3, 5, -5, 3, -1};
+      findMin(b);
     }
 }

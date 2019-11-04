@@ -22,15 +22,17 @@ class Lesson_34_Activity_Two {
   
    public static double average(int [] a)
     {
-    //Write your code here
-    //Change the return value as you see fit
-     return 0; 
+     double total = 0.0;
+     for(int i = 0; i < a.length; i++)
+     {
+       total += (double)(a[i]);
+     }
+     return (total/a.length); 
     }
   
     public static void main(String[] args)
      {
-     /*
-      * Test your method here
-      */
+     int [] b = new int [] {1, 2, 3};
+     average(b);
     }
 }

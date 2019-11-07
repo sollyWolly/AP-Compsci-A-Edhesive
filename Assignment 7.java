@@ -37,7 +37,14 @@ class Lesson_33_Activity_Five {
             change[0] = change[0] + str.substring(s,s+1);
           }
         }
+        boolean condition = true;
+        int z = str.length() - 1;
         for(int y = 0; y < str.length(); y++){
+          if(change[0].substring(y,y+1) == change[0].substring(z-1,z)){
+          }
+          else{
+            
+            System.out.println("Too bad, that isn't an Edhesive Palindrome.");
           
       }
     }

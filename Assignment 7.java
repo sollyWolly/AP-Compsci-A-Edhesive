@@ -40,12 +40,17 @@ class Lesson_33_Activity_Five {
         boolean condition = true;
         int z = str.length() - 1;
         for(int y = 0; y < str.length(); y++){
-          if(change[0].substring(y,y+1) == change[0].substring(z-1,z)){
+          if(change[0].substring(y,y+1) == change[0].substring(z-1,z))
+          {
+            //ninehead
           }
           else{
-            
             System.out.println("Too bad, that isn't an Edhesive Palindrome.");
-          
+            return;
+          }
+        System.out.println("Nice, you found an Edhesive Palindrome!");
+        return;
+        }
       }
     }
     

@@ -42,7 +42,7 @@ class Lesson_33_Activity_Five {
         for(int y = 0; y < str.length(); y++){
           if(change[0].substring(y,y+1) == change[0].substring(z-1,z))
           {
-            //ninehead
+            z = z - 1;
           }
           else{
             System.out.println("Too bad, that isn't an Edhesive Palindrome.");

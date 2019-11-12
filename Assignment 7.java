@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Lesson_33_Activity_Five {
+class Main {
   
     public static void duplicate(String str)
     {
@@ -23,40 +23,60 @@ class Lesson_33_Activity_Five {
       else{
         str = str.toLowerCase();
         String [] change = new String [1];
-        for(int s = 0; s < str.length(); s++){
-          if (str.substring(s,s+1) == "4"){
+        for(int s = 0; s < str.length(); s++)
+        {
+          if (str.charAt(s) == '4'){
             change[0] = change[0] + "a";
+            System.out.println(change[0]);
           }
-          if (str.substring(s,s+1) == "3"){
+          else if (str.charAt(s) == '3'){
             change[0] = change[0] + "e";
+            System.out.println(change[0]);
           }
-          if (str.substring(s,s+1) == "0"){
+          else if (str.charAt(s) == '0'){
             change[0] = change[0] + "o";
+            System.out.println(change[0]);
           }
           else{
-            change[0] = change[0] + str.substring(s,s+1);
+            if(s == 0)
+            {
+              change[0] = str.substring(s,s+1);
+              System.out.println(change[0]);
+            }
+            else
+            {
+              change[0] = change[0] + str.substring(s,s+1);
+              System.out.println(change[0]);
+            }
           }
         }
-        boolean condition = true;
         int z = str.length() - 1;
         for(int y = 0; y < str.length(); y++){
-          if(change[0].substring(y,y+1) == change[0].substring(z-1,z))
+          if(change[0].charAt(y) == change[0].charAt(z))
           {
             z = z - 1;
           }
-          else{
+          else
+          {
+            System.out.println(change[0]);
             System.out.println("Too bad, that isn't an Edhesive Palindrome.");
             return;
           }
+        }
         System.out.println("Nice, you found an Edhesive Palindrome!");
         return;
-        }
       }
     }
     
-    public static void numberScramble(double num)
+    public static double numberScramble(double num)
     {
-      System.out.println(" ");
+      if(num < 0)
+      {
+        System.out.println("The scrambled number is: " + 0.0);
+      }
+      num = Math.sqrt(((num+5)/2));
+      System.out.println("The scrambled number is: " + num);
+      return num;
     }
     
     public static void main(String[] args)

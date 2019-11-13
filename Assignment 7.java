@@ -102,7 +102,7 @@ class Main {
       Scanner scan = new Scanner (System.in);
       System.out.println("Welcome to the Methods Sampler Platter. Please enter a String to duplicate.");
       String name = scan.nextLine();
-      System.out.println(duplicate(name));
+      System.out.println("The duplicated String is: " + duplicate(name));
       System.out.println("");
       System.out.println("Next, please enter a String to check for Edhesive Palindromes.");
       String pal = scan.nextLine();

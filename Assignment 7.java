@@ -36,7 +36,7 @@ class Main {
             }
             else
             {
-            change[0] = change[0] + "a";
+              change[0] = change[0] + "a";
             }
           }
           else if (str.charAt(s) == '3'){
@@ -46,7 +46,7 @@ class Main {
             }
             else
             {
-            change[0] = change[0] + "e";
+              change[0] = change[0] + "e";
             }
           }
           else if (str.charAt(s) == '0'){
@@ -56,7 +56,7 @@ class Main {
             }
             else
             {
-            change[0] = change[0] + "o";
+              change[0] = change[0] + "o";
             }
           }
           else{

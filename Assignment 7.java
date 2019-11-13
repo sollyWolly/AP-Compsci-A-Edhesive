@@ -89,11 +89,12 @@ class Main {
     {
       if(num < 0)
       {
-        System.out.println("The scrambled number is: " + 0.0);
+        return 0.0;
       }
-      num = Math.sqrt(((num+5.0)/2.0));
-      System.out.println("The scrambled number is: " + num);
-      return num;
+      else
+      {
+        return Math.sqrt((num+5.0)/2.0);
+      }
     }
     
     public static void main(String[] args)
@@ -115,6 +116,6 @@ class Main {
       }
       System.out.println("Almost done! Please enter a number to scramble.");
       double number = scan.nextDouble();
-      numberScramble(number);
+      System.out.println("The scrambled number is: " + numberScramble(number));
     }
 }

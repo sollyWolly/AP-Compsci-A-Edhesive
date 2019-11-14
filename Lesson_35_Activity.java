@@ -20,47 +20,31 @@ import java.util.Scanner;
 
 class Lesson_35_Activity {
   
-    /*randomize()
-     * This method must have two int paramters called min and max. 
-     * This method returns a random int between min and max inclusive. 
+    public static int randomize(int min, int max)
     {
-    //Write your code here
-    //Change the return value as you see fit
+      return (int)((Math.random()*(max-min)) + min);
     }
-   */
      
-     /*randomize()
-      * This method must have one int parameter max. 
-      * Returns a random int between 0 and max inclusive.
+    public static int randomize(int max)
     {
-    //Write your code here
-    //Change the return value as you see fit
+      return (int)(Math.random()*max);
     }
-    */
   
-    /*randomize()
-     * This method must have two double parameters. 
-     * This method returns a random double between min and max inclusive.
+    public static double randomize(double min, double max)
     {
-    //Write your code here
-    //Change the return value as you see fit 
-    }    
-    */
+      return ((Math.random()*(max-min)) + min);
+    }
   
-    /*randomize()
-     * This method must have one double parameter.
-     * This method returns a random double between 0 and max inclusive.
+    public static double randomize(double max)
     {
-    //Write your code here
-    //Change the return value as you see fit
+      return Math.random()*max;
     }    
-    */
      
     public static void main(String[] args)
-     {
-     /*
-      * Test your method here
-      * Copy and paste this entire class to Code Runner.
-      */
+    {
+      randomize(1, 10);
+      randomize(1.0, 10);
+      randomize(5.6, 9.7);
+      randomize(1, 10.0);
     }
 }

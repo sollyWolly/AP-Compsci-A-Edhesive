@@ -41,14 +41,25 @@ public class Fraction
   // TODO write method to return fraction as a mixed number String
   public String mixedNumber()
   {
-    mixed = mixed + (numerator/denominator) + " " + (numerator-denominator) + "/" + denominator;
+    if(numerator > denominator){
+      mixed = mixed + (numerator/denominator) + " " + (numerator-denominator) + "/" + denominator;
+    }
+    if(numerator < denominator){
+      mixed = mixed + numerator + "/" + denominator;
+    }
+    if(numerator == denominator){
+      
+    }
     return mixed;
   }
   
   // TODO write method to add fraction n/d to this Fraction
   public void add(int n, int d)
   {
-    numerator = numerator * d + denominator * n;
-    denominator = 
+    if(n > 0 && d > 0)
+    {
+      numerator = numerator * d + denominator * n;
+      denominator = denominator * d;
+    }
   }
 }

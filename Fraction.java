@@ -4,7 +4,7 @@ public class Fraction
 {
   private int numerator;
   private int denominator;
-  private String mixed;
+  private String mixed = "";
   private String powfu = "";
   
   // TODO write default constructor
@@ -41,14 +41,17 @@ public class Fraction
   // TODO write method to return fraction as a mixed number String
   public String mixedNumber()
   {
+    if(numerator % denominator == 0){
+      mixed = Integer.toString(numerator/denominator);
+      return mixed;
+    }
     if(numerator > denominator){
-      mixed = mixed + (numerator/denominator) + " " + (numerator-denominator) + "/" + denominator;
+      mixed = mixed + numerator/denominator + " " + numerator % denominator + "/" + denominator;
+      return mixed;
     }
     if(numerator < denominator){
       mixed = mixed + numerator + "/" + denominator;
-    }
-    if(numerator == denominator){
-      
+      return mixed;
     }
     return mixed;
   }

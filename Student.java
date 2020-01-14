@@ -35,6 +35,6 @@ public class Student
     x++;
   }
   public String toString(){
-    return last + ", " + first + "\n" + 
+    return (last + ", " + first + "\n" + "GPA: " + gpa + "\n" + "Grade Level: " + gradeLevel);
   }
 }

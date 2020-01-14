@@ -4,8 +4,8 @@ public class Student
   private String lastName;
   private int gradeLevel;
   private double gpa;
-  private int studentID;
-  public int x = 0;
+  private static int studentID = 0;
+  private String sent = "";
   
   public Student(){
     Student x = new Student();
@@ -13,8 +13,8 @@ public class Student
     lastName = "none";
     gradeLevel = 0;
     gpa = 0.0;
-    studentID = 1 + x;
-    x++;
+    Student.studentID++;
+    
   }
   public Student(String first, String last, int grade, double gpa1){
     firstName = first;
@@ -31,10 +31,10 @@ public class Student
     if(gpa1 < 0.0 && gpa1 > 4.5){
       gpa = 0.0;
     }
-    studentID = 1 + x;
-    x++;
+    Student.studentID++;
   }
   public String toString(){
-    return (last + ", " + first + "\n" + "GPA: " + gpa + "\n" + "Grade Level: " + gradeLevel);
+    sent = sent + lastName + ", " + firstName + "\n" + "GPA: " + gpa + "\n" + "Grade Level: " + gradeLevel + "id #" + studentID;
+    return sent;
   }
 }

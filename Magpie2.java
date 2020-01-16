@@ -50,10 +50,18 @@ public class Magpie2
   {
     response = "He sounds like a good teacher.";
   }
-  //else if (statement.trim() == " ");
-  //{
-  //  response = "Say something, please.";
-  //}
+  else if (statement.trim().equals(""))
+  {
+    response = "Say something, please.";
+  }
+  else if (statement.indexOf("pasta") >= 0)
+  {
+    response = "Oh, so you like pasta?";
+  }
+  else if (statement.indexOf("math") >= 0)
+  {
+    response = "ewww. I dont like that subject.";
+  }
   else
   {
     response = getRandomResponse();

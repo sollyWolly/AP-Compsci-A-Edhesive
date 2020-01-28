@@ -108,6 +108,7 @@ public class Boxcar
     // to "gizmos".
     public void setCargo(String c)
     {
+        c = c.toLowerCase();
         if(c.equals("gizmos") || c.equals("gadgets") || c.equals("widgets") || c.equals("wadgets"))
         {
             cargo = c;
@@ -132,6 +133,6 @@ public class Boxcar
     public void callForRepair()
     {
         repair = true;
-        NumUnits = 0;
+        numUnits = 0;
     }
 }

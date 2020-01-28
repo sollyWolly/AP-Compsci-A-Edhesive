@@ -108,19 +108,30 @@ public class Boxcar
     // to "gizmos".
     public void setCargo(String c)
     {
-        /* missing code */
+        if(c.equals("gizmos") || c.equals("gadgets") || c.equals("widgets") || c.equals("wadgets"))
+        {
+            cargo = c;
+        }
+        else
+        {
+            cargo = "gizmos";
+        }
     }
 
     // The isFull method returns true if numUnits is equal to 10, false otherwise.
     public boolean isFull()
     {
-        /* missing code (don't forget to update the return statement) */
+        if(numUnits == 10)
+        {
+            return true;
+        }
         return false;
     }
 
     // The callForRepair method sets the variable repair to true, and numUnits to 0.
     public void callForRepair()
     {
-        /* missing code */
+        repair = true;
+        NumUnits = 0;
     }
 }

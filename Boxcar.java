@@ -14,7 +14,9 @@ public class Boxcar
     // Default constructor that sets the boxcar to "gizmos", 5, and false.
     public Boxcar()
     {
-        /* missing code */
+        cargo = "gizmos";
+        numUnits = 5;
+        repair = false;
     }
 
 
@@ -28,7 +30,32 @@ public class Boxcar
     // no matter what value is stored in the u parameter.
     public Boxcar(String c, int u, boolean r)
     {
-        /* missing code */
+        if(c.equals(c)){
+            if(c.equals("gizmos") || c.equals("gadgets") || c.equals("widgets") || c.equals("wadgets"))
+            {
+                cargo = c;
+            }
+            else
+            {
+                cargo = "gizmos";
+            }
+        }
+        if(u == u){
+            if(u < 0 || u > 10)
+            {
+                numUnits = 0;
+            }
+            else
+            {
+                numUnits = u;
+            }
+        }
+        repair = r;
+        if(r)
+        {
+            numUnits = 0;
+        }
+        
     }
 
     // The toString method returns a String with the Boxcar in the format:
@@ -40,8 +67,17 @@ public class Boxcar
     // and a tab between the value for cargo and "in repair"/"in service"
     public String toString()
     {
-        /* missing code (don't forget to update the return statement) */
-        return "";
+        String powfu = "";
+        powfu = numUnits + " " + cargo + "\t";
+        if(repair)
+        {
+            powfu += "in repair";
+        }
+        else
+        {
+            powfu += "in service";
+        }
+        return powfu;
     }
 
     // This method adds 1 to the number of units in the BoxCar. The maximum
@@ -49,14 +85,20 @@ public class Boxcar
     // would go beyond the maximum, keep numUnits at the max capacity.
     // If the repair variable is true, then numUnits may only be set to 0.
     public void loadCargo() {
-        /* missing code */
+        if(numUnits != 10 && !repair)
+        {
+            numUnits++;
+        }
+        else if(repair)
+        {
+            numUnits = 0;
+        }
     }
 
     // The getCargo method returns the cargo of the boxcar.
     public String getCargo()
     {
-        /* missing code (don't forget to update the return statement) */
-        return "";
+        return cargo;
     }
 
     // The setCargo method sets the cargo type of the boxcar. The cargo variable is

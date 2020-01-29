@@ -33,7 +33,7 @@ public class FreightTrain
         }
         else
         {
-            FreightTrain();
+            train.add(new Boxcar());
         }
     }
 
@@ -75,30 +75,26 @@ public class FreightTrain
     // until the end of the train.
     public void setMultiCargo()
     {
-        int switch = 0;
+        int count = 0;
         for(Boxcar c: train)
         {
-            if(switch == 4)
-            {
-                switch = 0;
-            }
-            if(switch == 0)
+            if(count % 4 == 0)
             {
                 c.setCargo("gizmos");
             }
-            else if(switch == 1)
+            else if(count % 4 == 1)
             {
                 c.setCargo("gadgets");
             }
-            else if(switch == 2)
+            else if(count % 4 == 2)
             {
                 c.setCargo("widgets");
             }
-            else if(switch == 3)
+            else if(count % 4 == 3)
             {
                 c.setCargo("wadgets");
             }
-            switch++;
+            count++;
         }
     }
 
@@ -109,13 +105,9 @@ public class FreightTrain
     {
         for(Boxcar d: train)
         {
-            if(!repair)
+            for(int foo = 0; foo < 10; foo++)
             {
-                d.numUnits = 10;
-            }
-            else
-            {
-                d.numUnits = 0;
+                d.loadCargo();
             }
         }
     }

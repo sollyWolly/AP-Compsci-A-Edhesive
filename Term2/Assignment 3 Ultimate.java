@@ -20,12 +20,13 @@ public class Person
 
 public class UltimatePlayer extends Person
 {
-  static int jerseyNumber;
+  static int jerseyNumber = 0;
   private String position;
   
   public UltimatePlayer(String firstName, String lastName, String pos)
   {
     super(firstName, lastName);
+    UltimatePlayer.jerseyNumber++;
     if(!pos.equals("handler") && !pos.equals("cutter"))
     {
       position = "handler";
@@ -43,7 +44,7 @@ public class UltimatePlayer extends Person
   
   public String toString()
   {
-    return (Person.lastname + ", " + Person.firstname + "\n   " + "Jersey #: " + jerseyNumber + "\n   " + "Position: " + position);
+    return (super.toString() + "\n   " + "Jersey #: " + jerseyNumber + "\n   " + "Position: " + position);
   }
 }
 

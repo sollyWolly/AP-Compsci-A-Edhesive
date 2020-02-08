@@ -75,7 +75,7 @@ public class Captain extends UltimatePlayer
 
 public class Coach extends Person
 {
-  String role;
+  private String role;
   
   public Coach(String firstName, String lastName, String r)
   {
@@ -85,10 +85,71 @@ public class Coach extends Person
   
   public String toString()
   {
-    return super.toString() + "\n   role: " + role;
+    return super.toString() + "\n   Role: " + role;
   }
 }
 
+public class UltimateTeam
+{
+  private ArrayList <UltimatePlayer> players = new ArrayList <UltimatePlayer>();
+  private ArrayList <Coach> coaches = new ArrayList <Coach>();
+  String powfu = "";
+  String ouse = "";
+  
+  public UltimateTeam(ArrayList<UltimatePlayer> play, ArrayList<Coach> coach)
+  {
+     for(int count1 = 0; count1 < play.size(); count1++)
+     {
+       players.add(play.get(count1));
+     }
+     for(int count2 = 0; count2 < coach.size(); count2++)
+     {
+       coaches.add(coach.get(count2));
+     }
+  }
+  
+  public String getCutters()
+  {
+    powfu = "";
+    for(int i = 0; i < players.size(); i++)
+    {
+      if(players.get(i).getPosition().equals("cutter"))
+      {
+        powfu += "\n" + players.get(i).toString();
+      }
+    }
+    return powfu;
+  }
+  
+  public String getHandlers()
+  {
+    ouse = "";
+    for(int i = 0; i < players.size(); i++)
+    {
+      if(players.get(i).getPosition().equals("handler"))
+      {
+        ouse += "\n" + players.get(i).toString();
+      }
+    }
+    return ouse;
+  }
+  
+  public String toString()
+  {
+    powfu = "";
+    ouse = "";
+    for (UltimatePlayer p : players)
+    {
+        powfu += p.toString() + "\n";
+    }
+
+    for (Coach c : coaches)
+    {
+        ouse += c.toString() + "\n";
+    }
+    return "COACHES\n" + ouse + "\nPLAYERS\n" + powfu;
+  }
+}
 
 
 

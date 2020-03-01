@@ -3,7 +3,10 @@
 /* A class which is used to represent fractions and implements
  * the comparable interface
  */
-public class Fraction
+
+import java.math.BigInteger;
+
+public class Fraction implements Comparable
 {
   private int numerator;
   private int denominator;
@@ -27,6 +30,7 @@ public class Fraction
     {
       denominator = d;
     }
+    simplify();
   }
   
   // Return the fraction as a String e.g. "2/3"
@@ -62,5 +66,51 @@ public class Fraction
       numerator = numerator * d + n * denominator;
       denominator *= d;
     }
+    simplify();
+  }
+  public int compareTo(Object other)
+  {
+    Fraction target;
+    target = (Fraction) other;
+    int thisNumer = this.numerator;
+    int thisDenom = this.denominator;
+    int otherNumer = target.numerator;
+    int otherDenom = target.denominator;
+    thisNumer *= otherDenom;
+    otherNumer *= thisDenom;
+    if(thisNumer < otherNumer)
+    {
+      return -1;
+    }
+    if(thisNumer > otherNumer)
+    {
+      return 1;
+    }
+    return 0;
+  }
+  public static int gcd(int a, int b)
+  {
+    int num1 = a;
+    int num2 = b;
+    int gcdActual = 1;
+    for(int i = 1; i <= num1 && i <= num2; i++)
+    {
+      if(num1%i==0 && num2%i==0)
+      {
+        gcdActual = i;
+      }
+    }
+    return gcdActual;
+  }
+  public void simplify()
+  {
+    int div = gcd(numerator, denominator);
+    numerator = numerator/div;
+    denominator = denominator/div;
   }
 }
+
+
+
+
+

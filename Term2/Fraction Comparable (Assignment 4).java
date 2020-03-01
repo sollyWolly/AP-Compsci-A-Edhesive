@@ -4,8 +4,6 @@
  * the comparable interface
  */
 
-import java.math.BigInteger;
-
 public class Fraction implements Comparable
 {
   private int numerator;

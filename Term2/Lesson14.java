@@ -15,7 +15,14 @@ class Main
 	 */
 	public static int countLetter(ArrayList<String> list, String letter)
 	{
-		/* missing code */
+		int count = 0;
+		for(String b : list){
+			if(b.substring(0, 1).toUpperCase().equals(letter.toUpperCase()))
+			{
+				count++;
+			}
+		}
+		return count;
 	}
 
 	public static void main(String str[]) throws IOException

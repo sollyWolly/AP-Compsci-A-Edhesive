@@ -45,10 +45,44 @@ public class GameWheel
    */ 
   private void scramble()
   {
-    /* Add your code here */
+    ArrayList <String> red = new ArrayList <String>();
+    ArrayList <String> blue = new ArrayList <String>();
+    ArrayList <String> black = new ArrayList <String>();
+    ArrayList <String> temp = new ArrayList <String>();
+    for(int i = 0; i < 40; i++)
+    {
+      if(i % 2 == 1) //red
+      {
+        red.add(slices.get(i));
+      }
+      else if(i % 10 == 0) //black
+      {
+        black.add(slices.get(i));
+      }
+      else //blue
+      {
+        blue.add(slices.get(i));
+      }
+    }
+    for(int i = 0; i < 40; i++)
+    {
+      if(i % 2 == 1)
+      {
+        temp.add(red.get(Math.random*red.size()));
+      }
+      else if(i % 10 == 0)
+      {
+        temp.add(black.get(Math.random*black.size()));
+      }
+      else
+      {
+        temp.add(blue.get(Math.random*blue.size()));
+      }
+    }
+    slices = temp;
   }
-
   
+    
   // Helper method which initializes the slices in the wheel
   private void initGameWheel()
   {

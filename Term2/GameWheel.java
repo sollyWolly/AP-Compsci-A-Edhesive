@@ -68,15 +68,15 @@ public class GameWheel
     {
       if(i % 2 == 1)
       {
-        temp.add(red.get(Math.random*red.size()));
+        temp.add(red.get(Math.random()*red.size()));
       }
       else if(i % 10 == 0)
       {
-        temp.add(black.get(Math.random*black.size()));
+        temp.add(black.get(Math.random()*black.size()));
       }
       else
       {
-        temp.add(blue.get(Math.random*blue.size()));
+        temp.add(blue.get(Math.random()*blue.size()));
       }
     }
     slices = temp;

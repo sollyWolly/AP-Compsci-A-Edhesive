@@ -116,8 +116,28 @@ public class Main
 {
   public static void main (String[] args)
   {
-    Gamewheel();
-    Slice spin();
+    ArrayList <Slice> list = new ArrayList <Slice>();
+    GameWheel game = new GameWheel();
+    list.add(game.spinWheel());
+    list.add(game.spinWheel());
+    list.add(game.spinWheel());
+    if(list.get(0).getColor().equals(list.get(1).getColor()) && list.get(1).getColor().equals(list.get(2).getColor()))
+    {
+      System.out.println("Total prize money: $" + 2*(list.get(0).getPrizeAmount()+list.get(1).getPrizeAmount()+list.get(2).getPrizeAmount()));
+      System.out.println("");
+      System.out.println("Spin 1 - Color: " + list.get(0).getColor() + ", Prize Amount: $" + list.get(0).getPrizeAmount());
+      System.out.println("Spin 2 - Color: " + list.get(1).getColor() + ", Prize Amount: $" + list.get(1).getPrizeAmount());
+      System.out.println("Spin 3 - Color: " + list.get(2).getColor() + ", Prize Amount: $" + list.get(2).getPrizeAmount());
+      System.out.println("Three " + list.get(0).getColor() + "s = double your money!");
+    }
+    else
+    {
+      System.out.println("Total prize money: $" + (list.get(0).getPrizeAmount()+list.get(1).getPrizeAmount()+list.get(2).getPrizeAmount()));
+      System.out.println("");
+      System.out.println("Spin 1 - Color: " + list.get(0).getColor() + ", Prize Amount: $" + list.get(0).getPrizeAmount());
+      System.out.println("Spin 2 - Color: " + list.get(1).getColor() + ", Prize Amount: $" + list.get(1).getPrizeAmount());
+      System.out.println("Spin 3 - Color: " + list.get(2).getColor() + ", Prize Amount: $" + list.get(2).getPrizeAmount());
+    }
   }
 }
 

@@ -45,10 +45,11 @@ public class GameWheel
    */ 
   private void scramble()
   {
-    ArrayList <String> red = new ArrayList <String>();
-    ArrayList <String> blue = new ArrayList <String>();
-    ArrayList <String> black = new ArrayList <String>();
-    ArrayList <String> temp = new ArrayList <String>();
+    ArrayList <Slice> red = new ArrayList <Slice>();
+    ArrayList <Slice> blue = new ArrayList <Slice>();
+    ArrayList <Slice> black = new ArrayList <Slice>();
+    ArrayList <Slice> temp = new ArrayList <Slice>();
+    int rem = 0;
     for(int i = 0; i < 40; i++)
     {
       if(i % 2 == 1) //red
@@ -68,15 +69,21 @@ public class GameWheel
     {
       if(i % 2 == 1)
       {
-        temp.add(red.get(Math.random()*red.size()));
+        rem = (int)(Math.random()*red.size());
+        temp.add(red.get(rem));
+        red.remove(rem);
       }
       else if(i % 10 == 0)
       {
-        temp.add(black.get(Math.random()*black.size()));
+        rem = (int)(Math.random()*black.size());
+        temp.add(black.get(rem));
+        black.remove(rem);
       }
       else
       {
-        temp.add(blue.get(Math.random()*blue.size()));
+        rem = (int)(Math.random()*blue.size());
+        temp.add(blue.get(rem));
+        blue.remove(rem);
       }
     }
     slices = temp;
@@ -104,3 +111,14 @@ public class GameWheel
     return slices;
   }
 }
+
+public class Main 
+{
+  public static void main (String[] args)
+  {
+    Gamewheel();
+    Slice spin();
+  }
+}
+
+

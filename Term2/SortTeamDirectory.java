@@ -50,35 +50,47 @@ public class TeamMember
   }
 }
 
-public class Main extends TeamMember
-{
-  public void powfuSort()
+class Main {
+  public static void sort(ArrayList <TeamMember> a)
   {
-    
-  public static void main(String [] args)
-  {
-    Scanner scan = new Scanner(System.in);
-    String input1 = "";
-    String input2 = "";
-    while(!input.toLowerCase.equals("stop"))
+    for(int i = 1; i < a.size(); i++)
     {
-      System.out.println("Enter the next name:");
-      input1 = scan.nextLine();
-      if(input1.toLowerCase().equals("stop"))
+      for(int j = i; j > 0; j--)
       {
-        break;
+        if(a.get(j).compareTo(a.get(j-1)) == -1)
+        {
+          TeamMember temp = a.get(j);
+          a.set(j, a.get(j-1));
+          a.set(j-1, temp);
+        }
       }
-      System.out.println("Enter the next ID:");
-      input2 = scan.nextLine();
-      if(input2.toLowerCase().equals("stop"))
-      {
-        break;
-      }
-      list.add(new TeamMember(input1, input2));
-      powfuSort();
-      ArrayList.toString();
     }
   }
+  
+  public static void main(String[] args)
+  {
+    Scanner scan = new Scanner(System.in);
+    ArrayList <TeamMember> list = new ArrayList <TeamMember>();
+    ArrayList<TeamMember> sorted = new ArrayList <TeamMember>();
+    String name = "";
+    String ID = "1";
+
+    while(!(name.equals("stop")))
+    {
+      System.out.println("Enter the next name:");
+      name = scan.nextLine();
+      name = name.toLowerCase();
+      if (!(name.equals("stop")))
+      {
+        System.out.println("Enter the next ID:");
+        ID = scan.nextLine();
+        TeamMember a = new TeamMember(name, ID);
+        list.add(a);
+      }
+    }
+    sort(list);
+    System.out.println(list);
+ }
 }
     
     

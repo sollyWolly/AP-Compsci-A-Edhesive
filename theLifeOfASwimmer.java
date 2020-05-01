@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//Project
 public class Main
 {
   //I'm going to use these as obtainables so that you can access other areas

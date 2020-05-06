@@ -8,6 +8,7 @@ public class Main
   boolean key3;
   String input;
   int in;
+  String name = "";
   
   public static void main(String args[])
   {
@@ -39,32 +40,38 @@ public class Main
   public static void start()
   {
     System.out.println("  ");
-    System.out.println("[Insert Really Interesting Swim Introduction or Backstory]");
+    System.out.print("Our story begins in Southern California, the swim capital of the world and an extraordinary place to begin our young swimmers's journey. ");
+    System.out.println("Tell me, what is the name of this particular swimmer? "
     System.out.println("  ");
-    System.out.println("[Insert Question Here]");
+    System.out.println("His name is?");
+    name = scan.nextLine();
     System.out.println("  ");
-    System.out.println("1 - Choice1");
-    System.out.println("2 - Choice2");
-    System.out.println("3 - Choice3");
-    System.out.println("4 - Choice4");
+    System.out.println("Ah yes, " + name + " is going to be a wonderful swimmer.");
+                       
+    System.out.println("  ");
+    System.out.println("It is your first day of swim team, and you go to talk to some of your new teammates. Who do you talk to?
+    System.out.println("1 - The captain of the team");
+    System.out.println("2 - The casual swimmers");
+    System.out.println("3 - The competitive athletes");
+    
     in = scan.nextInt();
     //Pathways
     if(in == 1)
     {
-      System.out.println("Choice1 has been chosen");
+      System.out.println("The captain has been chosen");
     }
     else if(in == 2)
     {
-      System.out.println("Choice2 has been chosen");
+      System.out.println("The casual swimmers have been chosen");
     }
     else if(in == 3)
     {
-      System.out.println("Choice3 has been chosen");
+      System.out.println("The competitive athletes have been chosen");
     }
-    else if(in == 4)
-    {
-      System.out.println("Choice4 has been chosen");
-    }
+    
+                       
+                       
+                       
   }
 }
     

@@ -4,9 +4,9 @@ public class Main
 {
   //I'm going to use these as obtainables so that you can access other areas
   
-  String input;
-  int in;
-  String name = "";
+  static String input;
+  static int in;
+  static String name = "";
   
   public static void main(String args[])
   {
@@ -37,6 +37,7 @@ public class Main
   }
   public static void start()
   {
+    Scanner scan  = new Scanner (System.in);
     System.out.println("  ");
     System.out.print("Our story begins in Southern California, the swim capital of the world and an extraordinary place to begin our young swimmers's journey. ");
     System.out.println("Tell me, what is the name of this particular swimmer?");

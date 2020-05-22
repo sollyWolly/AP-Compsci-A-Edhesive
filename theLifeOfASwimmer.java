@@ -196,7 +196,7 @@ public class Main
 public class end {
   boolean result;
   
-  end (entry) {
+  public end (boolean entry) {
     result = entry;
   }
   

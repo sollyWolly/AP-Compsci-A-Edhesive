@@ -39,7 +39,7 @@ public class Main
   {
     System.out.println("  ");
     System.out.print("Our story begins in Southern California, the swim capital of the world and an extraordinary place to begin our young swimmers's journey. ");
-    System.out.println("Tell me, what is the name of this particular swimmer? "
+    System.out.println("Tell me, what is the name of this particular swimmer?");
     System.out.println("  ");
     System.out.println("His name is?");
     name = scan.nextLine();
@@ -70,7 +70,7 @@ public class Main
         if(in == 1)
         {
           System.out.println("You look at the psych sheet. You don't see your name. You realize that the coach didn't put you in any events. You go home and eat ice cream.");
-          end no event = new end(false); 
+          end noevent = new end(false); 
         }
         else if(in == 2)
         {
@@ -98,9 +98,9 @@ public class Main
         if(in == 1)
         {
           System.out.println("He says \"Oh that's it, I'm asking coach if that's true. COACH IS THAT TRUE?\" Coach says \"Yes, you are only captain because I felt sorry for you\"");
-          end crying = new end(true); 
+          end istrue = new end(true); 
         }
-        else(in == 2)
+        else if(in == 2)
         {
           System.out.println("He says \"COACH, THE NEW GUY SAYS YOU'RE STUPID.\" You get kicked off the team.");
           end badcoach = new end(false); 
@@ -127,7 +127,7 @@ public class Main
       else if(in == 3)
       {
         System.out.println("They all start freaking out and running over to the starting blocks. You finesse their Switch and go home.");
-        end crying = new end(true); 
+        end finesse = new end(true); 
       }
     }
     else if(in == 3)
@@ -152,7 +152,7 @@ public class Main
         else if(in == 2)
         {
           System.out.println("He says \"Yeah, let's be friends!\" You both walk away from the pool holding hands and frolicked into the sunset.");
-          end crying = new end(true); 
+          end holdhands = new end(true); 
         }
         else if(in == 3)
         {
@@ -200,7 +200,7 @@ public class end {
     result = entry;
   }
   
-  public boolean getResult {
+  public boolean getResult() {
     return result;
   }
   

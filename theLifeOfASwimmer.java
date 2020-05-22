@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main
 {
   //I'm going to use these as obtainables so that you can access other areas
-  boolean ending;
+  
   String input;
   int in;
   String name = "";
@@ -70,12 +70,12 @@ public class Main
         if(in == 1)
         {
           System.out.println("You look at the psych sheet. You don't see your name. You realize that the coach didn't put you in any events. You go home and eat ice cream.");
-          ending = false;
+          end no event = new end(false); 
         }
         else if(in == 2)
         {
           System.out.println("He says \"Alright if you're going to be rude about it, then I'm going to kick you off the team. Goodbye.\"");
-          ending = false;
+          end rude = new end(false); 
         }
       }
       else if(in == 2)
@@ -86,7 +86,7 @@ public class Main
         if(in == 1)
         {
           System.out.println("He agrees and you guys start to race. You win with a minute lead. He gets really mad and decides to quit. Coach makes you the new captain.");
-          ending = false;
+          end friendquit = new end(false); 
         }
       }
       else if(in == 3)
@@ -98,12 +98,12 @@ public class Main
         if(in == 1)
         {
           System.out.println("He says \"Oh that's it, I'm asking coach if that's true. COACH IS THAT TRUE?\" Coach says \"Yes, you are only captain because I felt sorry for you\"");
-          ending = true;
+          end crying = new end(true); 
         }
         else(in == 2)
         {
           System.out.println("He says \"COACH, THE NEW GUY SAYS YOU'RE STUPID.\" You get kicked off the team.");
-          ending = false;
+          end badcoach = new end(false); 
         }
       }
     }
@@ -117,17 +117,17 @@ public class Main
       if(in == 1)
       {
         System.out.println("They ignore you. You take the switch and throw it into the water. They all start beating you up.");
-        ending = false;
+        end switchwater = new end(false); 
       }
       else if(in == 2)
       {
         System.out.println("They all stop playing the game and without saying any words, they start beating you up.");
-        ending = false;
+       end stopgame = new end(false); 
       }
       else if(in == 3)
       {
         System.out.println("They all start freaking out and running over to the starting blocks. You finesse their Switch and go home.");
-        ending = true;
+        end crying = new end(true); 
       }
     }
     else if(in == 3)
@@ -147,12 +147,12 @@ public class Main
         if(in == 1)
         {
           System.out.println("He says \"Takes one to know one buddy.\" You are so traumatized by that comeback that you die.");
-          ending = false;
+          end comeback = new end(false); 
         }
         else if(in == 2)
         {
           System.out.println("He says \"Yeah, let's be friends!\" You both walk away from the pool holding hands and frolicked into the sunset.");
-          ending = true;
+          end crying = new end(true); 
         }
         else if(in == 3)
         {
@@ -164,31 +164,44 @@ public class Main
           if(in == 1)
           {
             System.out.println("He says \"Oh boy, Gimme that.\" He eats the corndog and then dies.");
-            ending = false;
+            end corndog = new end(false); 
           }
           else if(in == 2)
           {
             System.out.println("He says \"Okay I'll try it.\"He eats the corndog and then his arms disappear. Coach kicks both of you off the team.");
-            ending = false;
+           end arms = new end(false); 
           }
           else if(in == 3)
           {
             System.out.println("He says \"Alright.\" He eats the corndog and nothing happens. You miss your event while this is happening. Coach kicks you off the team.");
-            ending = false;
+            end missevent = new end(false); 
           }
         }
       }
       else if(in == 2)
       {
         System.out.println("He punches u in the stomach so hard that you go flying 25 meters over the pool to the other side");
-        ending = false;
+        end punch = new end(false); 
       }
       else if(in == 3)
       {
         System.out.println("He starts crying. The coach sees you and kicks you off the team.");
-        ending = false;
+        end crying = new end(false); 
       }
     }                  
   }
 }
     
+                       
+public class end {
+  boolean result;
+  
+  public end (entry){
+    result = entry;
+  }
+  
+  public boolean getResult {
+    return result;
+  }
+  
+}

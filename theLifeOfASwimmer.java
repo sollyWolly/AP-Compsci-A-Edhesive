@@ -47,7 +47,7 @@ public class Main
     System.out.println("Ah yes, " + name + " is going to be a wonderful swimmer.");
                        
     System.out.println("  ");
-    System.out.println("It is your first day of swim team, and you go to talk to some of your new teammates. Who do you talk to?);
+    System.out.println("It is your first day of swim team, and you go to talk to some of your new teammates. Who do you talk to?");
     System.out.println("1 - The captain of the team");
     System.out.println("2 - The casual swimmers");
     System.out.println("3 - The competitive athletes");
